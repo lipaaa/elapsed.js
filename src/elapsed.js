@@ -15,6 +15,26 @@
             console.log('elapsed.js: ' + version);
 
             return this;
+        },
+
+
+        currentTime: function() {
+
+            return Date.now();
+
+        },
+
+
+        checkElapsedTime: function() {
+
+            return this.currentTime() - this.timestamp;
+
+        },
+
+        seconds: function() {
+
+            return Math.floor(this.checkElapsedTime() / 1000);
+
         }
 
     };
